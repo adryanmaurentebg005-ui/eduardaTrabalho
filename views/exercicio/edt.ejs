@@ -1,0 +1,75 @@
+<%- include('../cabecalho.ejs') %>
+
+<header>
+  <h3>Editar Exercício</h3>
+</header>
+
+<div class="content">
+  <form id="form-exercicio" 
+        method="post" 
+        autocomplete="off"
+        action="/exercicio/edt/<%= exercicio._id %>">
+
+    <div class="grid">
+
+      <div>
+        <label for="id">ID</label>
+        <input id="id" type="text" value="<%= exercicio._id %>" readonly required>
+      </div>
+
+      <div>
+        <label for="nome">Nome do Exercício</label>
+        <input id="nome" 
+               name="nome" 
+               type="text" 
+               value="<%= exercicio.nome %>" 
+               required>
+      </div>
+
+      <div>
+        <label for="grupomusc">Grupo Muscular</label>
+        <input id="grupomusc" 
+               name="grupomusc" 
+               type="text" 
+               value="<%= exercicio.grupomusc %>" 
+               required>
+      </div>
+
+      <div>
+        <label for="séries">Séries</label>
+        <input id="séries" 
+               name="séries" 
+               type="number" 
+               value="<%= exercicio['séries'] %>" 
+               required>
+      </div>
+
+      <div>
+        <label for="repetições">Repetições</label>
+        <input id="repetições" 
+               name="repetições" 
+               type="number" 
+               value="<%= exercicio['repetições'] %>" 
+               required>
+      </div>
+
+      <div>
+        <label for="carga">Carga (kg)</label>
+        <input id="carga" 
+               name="carga" 
+               type="number" 
+               value="<%= exercicio.carga %>" 
+               required>
+      </div>
+
+    </div>
+
+    <footer>
+      <a class="btn ghost" href="/exercicio/lst">Cancelar</a>
+      <button type="submit" class="btn primary">Salvar</button>
+    </footer>
+
+  </form>
+</div>
+
+<%- include('../rodape.ejs') %>

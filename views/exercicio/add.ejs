@@ -1,0 +1,44 @@
+<%- include('../cabecalho.ejs') %>
+
+<header>
+  <div class="title2">Novo Exercício</div>
+  <div class="subtitle">Adicione um novo exercício</div><br>
+</header>
+
+<div class="content">
+  <form id="form-exercicio" autocomplete="off" action="/exercicio/add/ok" method="post">
+    <div class="grid">
+      <div>
+        <label for="nome">Nome do Exercício</label>
+        <input id="nome" name="nome" type="text" placeholder="Ex: Agachamento" required>
+      </div>
+
+      <div>
+        <label for="grupomusc">Grupo Muscular</label>
+        <input id="grupomusc" name="grupomusc" type="text" placeholder="Ex: Pernas, Peito..." required>
+      </div>
+
+      <div>
+        <label for="séries">Séries</label>
+        <input id="séries" name="séries" type="number" min="1" placeholder="Ex: 3" required>
+      </div>
+
+      <div>
+        <label for="repetições">Repetições</label>
+        <input id="repetições" name="repetições" type="number" min="1" placeholder="Ex: 10" required>
+      </div>
+
+      <div>
+        <label for="carga">Carga (kg)</label>
+        <input id="carga" name="carga" type="number" min="0" placeholder="Ex: 20" required>
+      </div>
+    </div>
+
+    <footer>
+      <a class="btn ghost" href="/exercicio/lst">Cancelar</a>
+      <button type="submit" class="btn primary">Salvar</button>
+    </footer>
+  </form>
+</div>
+
+<%- include('../rodape.ejs') %>

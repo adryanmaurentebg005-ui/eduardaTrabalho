@@ -1,0 +1,38 @@
+     <%-include('../cabecalho.ejs')%>
+     <header>
+        <div class="title2">Novo Aparelho</div>
+        <div class="subtitle">Adicione um novo aparelho</div><br>
+      </header>
+      <div class="content">
+        <form id="form-aparelho" autocomplete="off" action="/aparelho/add/ok" method="post">
+          <div class="grid">
+            <div>
+              <label for="nome">Nome do aparelho</label>
+              <input id="nome" name="nome" type="text" placeholder="Ex: Voador, LegPress, Polia..." required>
+            </div>
+           <div>
+              <label for="marca">Marca</label>
+              <input id="Marca" name="marca" type="text" placeholder="Ex: Life Fitness" required>
+            </div>
+           <div>
+              <label for="tipo">Tipo</label>
+              <input id="tipo" name="tipo" type="text" placeholder="Ex: Cardio" required>
+            </div>
+           <div>
+              <label for="preço">Preço</label>
+              <input id="preco" name="preco" type="number" placeholder="Ex: Life Fitness" required>
+            </div>
+
+           <div>
+              <label for="estado">Estado</label>
+              <input id="Estado" name="estado" type="text" placeholder="Ex: Usado" required>
+          </div>
+          
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/aparelho/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Criar aparelho</button>
+          </footer>
+        </form>
+      </div>
+
+      <%-include('../rodape.ejs')%>
